@@ -1,9 +1,11 @@
 package be.vives.oop.interfaces.humans;
 
+import be.vives.oop.interfaces.ISpeak;
+
 /**
  * Human
  */
-public class Human {
+public class Human implements ISpeak {
 
   public Human(String name) {
     this.name = name;
@@ -14,8 +16,8 @@ public class Human {
     return "Hi, my name is " + name;
   }
 
-  public void speak() {
-    System.out.println(this);    // Will call toString()
+  public String speak() {
+    return this.toString();
   }
 
   private String name = "Unnamed";
